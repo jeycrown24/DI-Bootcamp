@@ -134,3 +134,47 @@ total_cost = 10 + 2.5*len(toppings)
 toppings_text = ", ".join(toppings)
 print(f"Your toppings: {toppings_text}")
 print(f"Total cost of the pizza: ${total_cost:.2f}")
+#Exercise 9: Cinemax Tickets
+# 
+#Instructions:
+#Ask for the age of each person in a family who wants to buy a movie ticket.
+#Calculate the total cost based on the following rules:
+#Free for people under 3.
+#$10 for people aged 3 to 12.
+#$15 for anyone over 12.
+#Print the total ticket cost.
+
+family_ages = []
+while True:
+    age_input = input("Enter the age (or type 'done' to finish): ")
+    if age_input == 'done':
+        break
+    int_age = int(age_input)
+    family_ages.append(int_age)
+total_cost = 0
+for age in family_ages:
+    if age < 3:
+        total_cost += 0
+    elif 3 <= age <= 12:
+        total_cost += 10
+    else:
+        total_cost += 15
+print(f"Total ticket cost: ${total_cost}")
+
+#Bonus:
+#
+#Imagine a group of teenagers wants to see a restricted movie (only for ages 16–21).
+#Write a program to:
+#Ask for each person’s age.
+#Remove anyone who isn’t allowed to watch.
+#Print the final list of attendees.
+
+friends_ages = []
+while True:
+    age_input = input("Enter the age of your friend (or type 'done' to finish): ")
+    if age_input == 'done':
+        break
+    int_age = int(age_input)
+    friends_ages.append(int_age)
+allowed_friends = [age for age in friends_ages if 16 <= age <= 21]
+print(f"Final list of attendees: {allowed_friends}")

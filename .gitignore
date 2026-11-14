@@ -11,3 +11,9 @@ __pycache__/
 # Virtual environments
 .venv/
 venv/
+
+# Local practice files
+/Week2/Other/bookings.json
+/Week2/Other/bookings.xlsx
+/Week2/Other/hotel_bookin*
+/Week2/Other/Self_practise*
